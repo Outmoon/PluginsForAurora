@@ -51,37 +51,17 @@ namespace buildertools
             }
             else
             {
-                args.Player.SendSuccessMessage($"Gave tools to {args.Player.Name}");
+                args.Player.SendSuccessMessage($"Gave building tools to {args.Player.Name}.");
 
-                //spectre paint set
-                args.Player.GiveItem(1543, 1, 0);
-                args.Player.GiveItem(1544, 1, 0);
-                args.Player.GiveItem(1545, 1, 0);
-                //tools
-                args.Player.GiveItem(3611, 1, 0);
-                args.Player.GiveItem(496, 1, 0);
-                args.Player.GiveItem(1326, 1, 0);
-                args.Player.GiveItem(3620, 1, 0);
-                args.Player.GiveItem(510, 1, 0);
-                //ammo
+                int[] Items = {1543, 1544, 1545, 3611, 496, 1326, 3620, 510, 3061, 5010, 407, 1923, 2215, 3624, 4989, 4953, 4409, 4008, 410, 411, 4444};
+                
+                for(int i = 0; i < Items.Length; i++)
+                {
+                    args.Player.GiveItem(Items[i], 1, 0);
+                }
+
                 args.Player.GiveItem(849, 999, 0);
                 args.Player.GiveItem(530, 999, 0);
-                //accessories
-                args.Player.GiveItem(3061, 1, 0);
-                args.Player.GiveItem(5010, 1, 0);
-                args.Player.GiveItem(407, 1, 0);
-                args.Player.GiveItem(1923, 1, 0);
-                args.Player.GiveItem(2215, 1, 0);
-                args.Player.GiveItem(3624, 1, 0);
-                args.Player.GiveItem(4989, 1, 0);
-                args.Player.GiveItem(4954, 1, 0);
-                args.Player.GiveItem(4409, 1, 0);
-                //armor
-                args.Player.GiveItem(4008, 1, 0);
-                args.Player.GiveItem(410, 1, 0);
-                args.Player.GiveItem(411, 1, 0);
-                //mount
-                args.Player.GiveItem(4444, 1, 0);
             }
         }
     }
