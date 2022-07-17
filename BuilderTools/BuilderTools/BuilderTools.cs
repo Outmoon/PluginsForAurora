@@ -20,8 +20,6 @@ namespace buildertools
             Order = 1;
         }
 
-        // hooking and unhooking below
-
         public override void Initialize()
         {
             ServerApi.Hooks.GameInitialize.Register(this, OnInitialize);
@@ -35,8 +33,6 @@ namespace buildertools
             }
             base.Dispose(disposing);
         }
-
-        // functions & commands
 
         void OnInitialize(EventArgs args)
         {
@@ -53,7 +49,7 @@ namespace buildertools
             {
                 args.Player.SendSuccessMessage($"Gave building tools to {args.Player.Name}.");
 
-                int[] Items = {1543, 1544, 1545, 3611, 496, 1326, 3620, 510, 3061, 5010, 407, 1923, 2215, 3624, 4989, 4953, 4409, 4008, 410, 411, 4444};
+                int[] Items = {1543, 1544, 1545, 3611, 496, 1326, 3620, 510, 3061, 5010, 407, 1923, 2215, 3624, 4989, 4954, 4409, 4008, 410, 411, 4444};
                 
                 for(int i = 0; i < Items.Length; i++)
                 {
